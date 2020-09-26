@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <title>AKAN NAME </title>
+</head>
+
+  <body>
+         <div class = "container">
+         <div class="jumbotron">
+        <h2> AKAN NAMES</h2>
+        <p>The AKAN naming style is a way of naming  in <strong>Ghana</strong> where the baby is named according to the day of the week he/she was born on.</br> with your Akan name you will know the day of the week you were born without concerning the calendar. </br>
+        so, this will use your entered gender to know if you will be given a female or male name, 
+        and it will also use your born date to see the day you were born on.</p>
+        </div>
+        <p> Here is how names are depending on the day of the week:</p>
+        <table class="table table-hover table-striped">
+            <tr>
+                <th scope="col">DAY</th>
+                <th scope="col">MALE</th>
+                <th scope="col">FEMALE</th>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>Kwasi</td>
+                <td>Akosua</td>
+              </tr>
+              <tr>
+                <td>Monday</td>
+                <td>Kwadwo</td>
+                <td>Adwoa</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>Kwabena</td>
+                <td>Abenaa</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>Kwaku</td>
+                <td>Akua</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>Yaw</td>
+                <td>Yaa</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>Kofi</td>
+                <td>Afua</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>Kwame</td>
+                <td>Ama</td>
+              </tr>
+          </table> </br>
+
+        <form id="form" action="index.html" method="post">
+                  <div class="form-group">
+                    <label for="sex">Gender : </label>
+                    <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                  </div> </br>
+                  <div class="form-group">
+                    <label for="CC">Enter Century :</label>
+                    <input type="number" class="form-control" id="centuryBorn" onkeyup="digits(this)" name="year" value="">
+                  </div> </br>
+                  <div class="form-group">
+                    <label for="YY">Enter Year :</label>
+                    <input type="number" class="form-control" id="yearBorn" onkeyup="digits(this)" name="year" value="">
+                  </div> </br>
+                  <div class="form-group">
+                    <label for="MM"> Enter Month : </label>
+                    <select class="custom-select" id="monthBorn" name="">
+                        <option value="0">Month...</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                  </div> </br>
+                  <div class="form-group">
+                    <label for="DD"> Enter Day :</label>
+                    <input type="number" class="form-control" id="dayBorn" name="">
+                  </div> </br>
+                  <div class="form-group">
+                    <button type="button" onclick="selectGender(); giveCentury();giveYear();giveMonth();giveDay();validYear();validDay();getName();" class="btn btn-outline-success">Submit</button>
+                  </div> </br>
+        </form>
+
+        <h4>Results</h4>
+        <div  id="results-card">
+            <form class="result" id="answer" action="index.html" method="post">
+              <div class="form-group">
+                <input type="textarea" name="output" id="output">
+              </div>
+            </form>
+        </div>
+
+
+    
+    </div>
+     <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
