@@ -3,7 +3,7 @@ var currentYear = currentDate.getFullYear();
 
 function selectGender() {
   var gender = document.getElementById("gender").value;
-  if (gender == "") {
+  if (gender == 1) {
     alert("Choose your gender");
     return false;
   }
@@ -15,21 +15,21 @@ function giveCentury() {
     return false;
   }
  }
-  function giveYear() {
+function giveYear() {
     var year = document.getElementById("year").value;
     if (year == "") {
       alert("Enter year");
       return false;
     }
   }
-  function giveMonth() {
+function giveMonth() {
     var month = document.getElementById("month").value;
     if (month == "0") {
       alert("Enter month");
       return false;
     }
   }
-  function giveDay(){
+function giveDay(){
     var day = document.getElementById("day").value;
     if (day == ""){
       alert("Enter day");
@@ -48,7 +48,7 @@ function giveCentury() {
     input.value = input.value.replace(digits, "");
   }
   
-  function validDay(){
+function validDay(){
 
     var dayNumber = parseInt(document.getElementById("day").value);
     if (dayNumber > 31 || dayNumber < 1) {
@@ -58,8 +58,8 @@ function giveCentury() {
 
   }
 
-  function getResults(){
-    var weekDays = ['0', '1', '2', '3', '4', '5', '6'];
+function getResults(){
+    var days = ['0', '1', '2', '3', '4', '5', '6'];
     var maleNames = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kwame'];
     var femaleNames = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama'];
     var cc = parseInt(document.getElementById("century").value.slice(0, 2));
@@ -68,8 +68,8 @@ function giveCentury() {
     var mm = parseInt(document.getElementById("month").value);
     var day = (((cc/4)-2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd)%7;
     var weekDays = days[day.toFixed()];
-    var gender = parseInt(document.getElementById("gender").value);
-    if (gender == male) {
+    
+    if (gender == 2) {
       if (weekDays === '0') {
         document.getElementById("output").value = "Sunday,Akan Name is: " + maleNames[0];
         return true;
@@ -99,7 +99,7 @@ function giveCentury() {
         return true;
       }
     }
-      if (gender == female) {
+      if (gender == 3) {
         if (weekDays === '0') {
           document.getElementById("output").value = "sunday,Akan Name is: "+ femaleNames[0];
           return true;

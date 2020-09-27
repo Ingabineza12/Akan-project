@@ -69,9 +69,9 @@
                   <div class="form-group">
                     <label for="sex">Gender : </label>
                     <select class="custom-select" id="gender" name="Gender">
-                        <option value="">Gender...</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
+                        <option value= 1 >Gender...</option>
+                        <option value= 2>Male</option>
+                        <option value= 3>Female</option>
                        </select>
                         
                   </div> </br>
@@ -106,7 +106,7 @@
                     <input type="number" class="form-control" id="day">
                   </div> </br>
                   <div class="form-group">
-                    <button type="button" onclick="selectGender(); giveCentury();giveYear();giveMonth();giveDay();validDay();getResults();" class="btn btn-outline-info">Get name</button>
+                    <button type="button" class="btn btn-outline-info" onclick="selectGender(); giveCentury();giveYear();giveMonth();giveDay();validDay();getResults();">Get name</button>
                   </div> </br>
         </form>
         </div>
@@ -117,10 +117,9 @@
             
         <h4>Your Akan name would be:</h4>
         
-            <form class="result" id="answer" action="index.html" method="post">
-              <div class="form-group">
-                <input type="textarea" name="output" id="output">
-              </div>
+            <form class="result" action="index.html" method="post">
+                <div class="form-group">
+                  <input type="textarea" id="output">
             </form>
          </div>
          </div>
