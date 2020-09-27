@@ -3,12 +3,11 @@ var currentYear = currentDate.getFullYear();
 
 function selectGender() {
   var gender = document.getElementById("gender").value;
-  if (gender == "1") {
+  if (gender == "") {
     alert("Choose your gender");
     return false;
   }
 }
-
 function giveCentury() {
   var century = document.getElementById("century").value;
   if (century == "") {
@@ -41,13 +40,7 @@ function giveCentury() {
     var digits = /[^0-9]/;
     input.value = input.value.replace(digits, "");
   }
-  function validYear(){
-    var year = document.getElementById('year').value;
-    if (year < 1700 || year > currentYear) {
-      alert("Invalid Year");
-      return false;
-    }
-  }
+  
   function validDay(){
     var thirtyOneMonths = [1, 3, 5, 7, 8, 10, 12];
     var monthNumber = parseInt(document.getElementById("month").value);
@@ -86,63 +79,63 @@ function giveCentury() {
     var day = (((cc/4)-2*cc-1)+((5*yy/4))+((26*(mm+1)/10))+dd)%7;
     var akanDay = days[day.toFixed()];
     var gender = parseInt(document.getElementById("gender").value);
-    if (gender == 2) {
+    if (gender == male) {
       if (akanDay === 'Sunday') {
-        document.getElementById("output").value = "Born on Sunday: Your Akan Name would be: " + akanMale[0];
+        document.getElementById("output").value = "Sunday,Akan Name is: " + akanMale[0];
         return true;
       }
       else if (akanDay === 'Monday') {
-        document.getElementById("output").value = "Born on Monday: Your Akan Name would be: " + akanMale[1];
+        document.getElementById("output").value = "Monday,Akan Name is: "+ akanMale[1];
         return true;
       }
       else if (akanDay === 'Tuesday') {
-        document.getElementById("output").value = "Born on Tuesday: Your Akan Name would be: " + akanMale[2];
+        document.getElementById("output").value = "Tuesday,Akan Name is: " + akanMale[2];
         return true;
       }
       else if (akanDay === 'Wednesday') {
-        document.getElementById("output").value = "Born on Wednesday: Your Akan Name would be: " + akanMale[3];
+        document.getElementById("output").value = "Wednesday,Akan Name is: " + akanMale[3];
         return true;
       }
       else if (akanDay === 'Thursday') {
-        document.getElementById("output").value = "Born on Thursday: Your Akan Name would be: " + akanMale[4];
+        document.getElementById("output").value = "Thursday,Akan Name is: " + akanMale[4];
         return true;
       }
       else if (akanDay === 'Friday') {
-        document.getElementById("output").value = "Born on Friday: Your Akan Name would be: " + akanMale[5];
+        document.getElementById("output").value = "Friday,Akan Name is: " + akanMale[5];
         return true;
       }
       else {
-        document.getElementById("output").value = "Born on Saturday: Your Akan Name would be: " + akanMale[6];
+        document.getElementById("output").value = "Saturday,Akan Name is: " + akanMale[6];
         return true;
       }
     }
-      if (gender == 3) {
+      if (gender == female) {
         if (akanDay === 'Sunday') {
-          document.getElementById("output").value = "Born on Sunday: Your Akan Name would be: " + akanFemale[0];
+          document.getElementById("output").value = "sunday,Akan Name is: "+ akanFemale[0];
           return true;
         }
         else if (akanDay === 'Monday') {
-          document.getElementById("output").value = "Born on Monday: Your Akan Name would be: " + akanFemale[1];
+          document.getElementById("output").value = "Monday,Akan Name is: "+ akanFemale[1];
           return true;
         }
         else if (akanDay === 'Tuesday') {
-          document.getElementById("output").value = "Born on Tuesday: Your Akan Name would be: " + akanFemale[2];
+          document.getElementById("output").value = "Tuesday,Akan Name is: " + akanFemale[2];
           return true;
         }
         else if (akanDay === 'Wednesday') {
-          document.getElementById("output").value = "Born on Wednesday: Your Akan Name would be: " + akanFemale[3];
+          document.getElementById("output").value = "Wednesday,Akan Name is: " + akanFemale[3];
           return true;
         }
         else if (akanDay === 'Thursday') {
-          document.getElementById("output").value = "Born on Thursday: Your Akan Name would be: " + akanFemale[4];
+          document.getElementById("output").value = "Thursday,Akan Name is: "+ akanFemale[4];
           return true;
         }
         else if (akanDay === 'Friday') {
-          document.getElementById("output").value = "Born on Friday: Your Akan Name would be: " + akanFemale[5];
+          document.getElementById("output").value = "Friday,Akan Name is: " + akanFemale[5];
           return true;
         }
         else {
-          document.getElementById("output").value = "Born on Saturday: Your Akan Name would be: " + akanFemale[6];
+          document.getElementById("output").value ="Saturday,Akan Name is: " + akanFemale[6];
           return true;
         }
       }
