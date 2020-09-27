@@ -25,6 +25,7 @@ email: ingabineza@gmail.com
 
 
 ## link to live page 
+https://ingabineza12.github.io/Akan-project/
 
 
 ## copyright and licence
