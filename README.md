@@ -17,6 +17,16 @@ Then open the folder with your editor.
 
 ## BDD
 
+|  Behavior: our program requires|  output 	|  
+|---	|---	|
+|  Gender 	| Choose between Male or Female  	|   	
+|  century born in	|  Enter century you were born in 	|   	
+| year of birth  	|  Enter the year you were born in 	|   	
+|  month of birth 	| Select your birth month 	|   	
+|  day of birth 	|   Select the day you were born on	|   	
+|  submit 	|  Clicking submit it returns the Akan name basing on the entered gender and date of birth 	|   	
+
+
 ## Technologies used
 HTML , JAVASCRIPT and styled using BOOTSTRAP && CSS
 
