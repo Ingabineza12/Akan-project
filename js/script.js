@@ -29,6 +29,13 @@ function giveCentury() {
       return false;
     }
   }
+  function giveDay(){
+    var day = document.getElementById("day").value;
+    if (day == ""){
+      alert("Enter day");
+      return false;
+    }
+  }
 
 
 
