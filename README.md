@@ -11,8 +11,8 @@ Contributors are always welcome!
 ## Setup/installation requirements
 You should start by :
 
-git clone https://github.com/ ingabineza12/Akan-project.git
-Select the folder you cloned the repository to.
+cloning https://github.com/ingabineza12/Akan-project.git , then 
+select the folder you cloned the repository to.
 Then open the folder with your editor.
 
 ## BDD
